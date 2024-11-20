@@ -17,6 +17,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.1",
     "@remix-run/node": "^2.14.0",
     "@remix-run/react": "^2.14.0",
     "@remix-run/serve": "^2.14.0",
