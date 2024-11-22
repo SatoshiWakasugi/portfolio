@@ -53,8 +53,17 @@ export default function Index() {
                 onMouseLeave={() => setIsHoveringText1(false)}
                 rel="noopener noreferrer"
                 target="_blank"
+                style={{
+                  padding: "0px 20px", // paddingを設定
+                  display: "inline-block", // インラインブロックにしてpaddingを適用
+                }}
               >
-                <text fill="white" fontSize="18" textAnchor="middle">
+                <text
+                  fill="white"
+                  fontSize="18"
+                  textAnchor="middle"
+                  className="hover:fill-cyan-400"
+                >
                   <textPath href="#outerCirclePath" startOffset="10%">
                     Visit Qiita ...
                   </textPath>
@@ -67,7 +76,12 @@ export default function Index() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <text fill="white" fontSize="18" textAnchor="middle">
+                <text
+                  fill="white"
+                  fontSize="18"
+                  textAnchor="middle"
+                  className="hover:fill-cyan-400"
+                >
                   <textPath href="#outerCirclePath" startOffset="35%">
                     Career history resume ...
                   </textPath>
@@ -80,7 +94,12 @@ export default function Index() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <text fill="white" fontSize="18" textAnchor="middle">
+                <text
+                  fill="white"
+                  fontSize="18"
+                  textAnchor="middle"
+                  className="hover:fill-cyan-400"
+                >
                   <textPath href="#outerCirclePath" startOffset="60%">
                     Check GitHub ...
                   </textPath>
@@ -93,7 +112,12 @@ export default function Index() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <text fill="white" fontSize="18" textAnchor="middle">
+                <text
+                  fill="white"
+                  fontSize="18"
+                  textAnchor="middle"
+                  className="hover:fill-cyan-400"
+                >
                   <textPath href="#outerCirclePath" startOffset="85%">
                     Visit Wantedly ...
                   </textPath>
@@ -102,34 +126,10 @@ export default function Index() {
             </svg>
 
             <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-white text-2xl text-center">
-              {isHoveringText1 && (
-                <p>
-                  Qiita
-                  <br />
-                  を見る
-                </p>
-              )}
-              {isHoveringText2 && (
-                <p>
-                  GitHub
-                  <br />
-                  を見る
-                </p>
-              )}
-              {isHoveringText3 && (
-                <p>
-                  職務経歴書
-                  <br />
-                  を見る
-                </p>
-              )}
-              {isHoveringText4 && (
-                <p>
-                  Wantedly
-                  <br />
-                  を見る
-                </p>
-              )}
+              {isHoveringText1 && <p>Qiita</p>}
+              {isHoveringText2 && <p>GitHub</p>}
+              {isHoveringText3 && <p>職務経歴書</p>}
+              {isHoveringText4 && <p>Wantedly</p>}
             </div>
           </div>
         </header>
