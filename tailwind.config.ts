@@ -23,6 +23,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {},
+      animation: {
+        "spin-slow": "spin 30s linear infinite",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
