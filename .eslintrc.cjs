@@ -65,7 +65,6 @@ module.exports = {
         "react/jsx-sort-props": "error",
         "react/self-closing-comp": "error",
         "react/jsx-pascal-case": "error",
-        "react/no-danger": "error",
         "react/prop-types": "off",
       },
     },
