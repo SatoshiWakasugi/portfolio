@@ -36,8 +36,16 @@ export const Resume: React.FC<Props> = ({ projects }) => {
     []
   );
 
+  const mostRecentUpdate = projects.reduce((latest, current) => {
+    return new Date(current.updatedAt) > new Date(latest.updatedAt)
+      ? current
+      : latest;
+  }, projects[0]);
+
   return (
-    <Document>
+    <Document
+      updatedAt={dayjs(mostRecentUpdate.updatedAt).format("YYYY年MM月")}
+    >
       {groupedProjects.map((group, index) => (
         <View break={index !== 0} key={index}>
           {group.map((project) => (

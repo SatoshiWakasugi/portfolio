@@ -10,6 +10,7 @@ import React, { useEffect } from "react";
 
 type Props = {
   children: React.ReactNode;
+  updatedAt: string;
 };
 
 const styles = StyleSheet.create({
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Document: React.FC<Props> = ({ children }) => {
+export const Document: React.FC<Props> = ({ children, updatedAt }) => {
   useEffect(() => {
     document.body.style.height = "100vh";
   }, []);
@@ -57,7 +58,7 @@ export const Document: React.FC<Props> = ({ children }) => {
               </View>
             </View>
             <View style={styles.textVertical}>
-              <Text>2024/11/21 現在</Text>
+              <Text>{updatedAt} 現在</Text>
             </View>
           </View>
           <View>{children}</View>
