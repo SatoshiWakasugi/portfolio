@@ -28,7 +28,7 @@ export const Profile: React.FC<Props> = ({
 
         <section className="mb-12">
           <div
-            className="text-lg leading-relaxed mx-24"
+            className="leading-relaxed mx-24"
             dangerouslySetInnerHTML={{ __html: introduction }}
           />
         </section>
@@ -36,7 +36,7 @@ export const Profile: React.FC<Props> = ({
         <section className="mb-12">
           <Heading className="text-center mb-4">スキル・得意分野</Heading>
           <div
-            className="text-lg leading-relaxed mx-24"
+            className="leading-relaxed mx-24"
             dangerouslySetInnerHTML={{ __html: skill }}
           />
         </section>
@@ -44,7 +44,7 @@ export const Profile: React.FC<Props> = ({
         <section className="mb-12">
           <Heading className="text-center mb-4">趣味・興味</Heading>
           <div
-            className="text-lg leading-relaxed mx-24"
+            className="leading-relaxed mx-24"
             dangerouslySetInnerHTML={{ __html: interest }}
           />
         </section>
@@ -52,7 +52,7 @@ export const Profile: React.FC<Props> = ({
         <section className="text-center mb-12">
           <Heading className="text-center mb-4">連絡先</Heading>
           <div
-            className="text-lg leading-relaxed mx-24"
+            className="leading-relaxed mx-24"
             dangerouslySetInnerHTML={{ __html: contact }}
           />
         </section>
