@@ -1,6 +1,6 @@
+import dayjs from "dayjs";
 import { Font, View } from "@react-pdf/renderer";
 import { Project } from "~/types/Project";
-import dayjs from "dayjs";
 import { ProjectTable } from "./ProjectTable";
 import { Document } from "./Document";
 

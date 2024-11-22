@@ -1,11 +1,19 @@
 import { Card } from "./Card";
+import { InnerHTMLContent } from "./InnerHTMLContent";
+import { Head } from "./Head";
 import { Heading } from "./Heading";
+import { HeadSubscript } from "./HeadSubscript";
+import { LinkItem } from "./LinkItem";
+import type { Link } from "~/types/Link";
 
 type Props = {
   introduction: string;
   skill: string;
   interest: string;
   contact: string;
+  introText: string;
+  catchPhrase: string;
+  links: Link[];
 };
 
 export const Profile: React.FC<Props> = ({
@@ -13,88 +21,60 @@ export const Profile: React.FC<Props> = ({
   skill,
   interest,
   contact,
+  links,
+  introText,
+  catchPhrase,
 }) => {
   return (
     <Card>
       <div className="max-w-4xl mx-auto p-6">
         <header className="text-center mb-10">
-          <h1 className="font-semibold">
-            こんにちは、若杉 智史（ワカスギ サトシ）です！
-          </h1>
-          <p className=" text-gray-600 mt-2">
-            フロントエンドエンジニア | バックエンドエンジニア
-          </p>
+          <Head>{introText}</Head>
+          <HeadSubscript>{catchPhrase}</HeadSubscript>
         </header>
 
         <section className="mb-12">
-          <div
-            className="leading-relaxed mx-24"
-            dangerouslySetInnerHTML={{ __html: introduction }}
-          />
+          <InnerHTMLContent contentString={introduction} />
         </section>
 
         <section className="mb-12">
           <Heading className="text-center mb-4">スキル・得意分野</Heading>
-          <div
-            className="leading-relaxed mx-24"
-            dangerouslySetInnerHTML={{ __html: skill }}
-          />
+          <InnerHTMLContent contentString={skill} />
         </section>
 
         <section className="mb-12">
           <Heading className="text-center mb-4">趣味・興味</Heading>
-          <div
-            className="leading-relaxed mx-24"
-            dangerouslySetInnerHTML={{ __html: interest }}
-          />
+          <InnerHTMLContent contentString={interest} />
         </section>
 
         <section className="text-center mb-12">
           <Heading className="text-center mb-4">連絡先</Heading>
-          <div
-            className="leading-relaxed mx-24"
-            dangerouslySetInnerHTML={{ __html: contact }}
-          />
+          <InnerHTMLContent contentString={contact} />
         </section>
 
         <section className="text-center mb-12">
           <Heading className="text-center mb-4">リンク</Heading>
           <ul className="flex justify-center mt-4 space-x-6">
-            <li>
-              <a
-                className="text-blue-600"
-                href="https://github.com/SatoshiWakasugi"
-                rel="noreferrer"
-                target="_blank"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-blue-600"
-                href="https://qiita.com/waka0628s"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Qiita
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-blue-600"
-                href="https://www.wantedly.com/id/satoshi_wakasugi_e"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Wantedly
-              </a>
-            </li>
-            <li>
-              <a className="text-blue-600" href="/career" target="_blank">
-                職務経歴書
-              </a>
-            </li>
+            {links.map((link) => {
+              return (
+                <LinkItem
+                  href={link.url}
+                  key={link.name}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {link.name}
+                </LinkItem>
+              );
+            })}
+            <LinkItem
+              className="text-blue-600"
+              href="/career"
+              rel="noreferrer"
+              target="_blank"
+            >
+              職務経歴書
+            </LinkItem>
           </ul>
         </section>
       </div>

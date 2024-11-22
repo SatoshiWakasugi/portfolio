@@ -1,9 +1,9 @@
-import type { MetaFunction } from "@remix-run/node";
 import { json, useLoaderData } from "@remix-run/react";
 import { ClientOnly } from "remix-utils/client-only";
 import { Resume } from "~/components/Resume";
-import { type MicroCMSContents } from "~/types/MicroCMS";
-import { type Project } from "~/types/Project";
+import type { MetaFunction } from "@remix-run/node";
+import type { MicroCMSContents } from "~/types/MicroCMS";
+import type { Project } from "~/types/Project";
 
 export const meta: MetaFunction = () => {
   return [

@@ -6,7 +6,7 @@ import {
   StyleSheet,
   PDFViewer,
 } from "@react-pdf/renderer";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 type Props = {
   children: React.ReactNode;
