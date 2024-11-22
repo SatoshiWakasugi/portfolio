@@ -52,17 +52,17 @@ export default function Index() {
                 onMouseEnter={() => setIsHoveringText1(true)}
                 onMouseLeave={() => setIsHoveringText1(false)}
                 rel="noopener noreferrer"
-                target="_blank"
                 style={{
                   padding: "0px 20px", // paddingを設定
                   display: "inline-block", // インラインブロックにしてpaddingを適用
                 }}
+                target="_blank"
               >
                 <text
+                  className="hover:fill-cyan-400"
                   fill="white"
                   fontSize="18"
                   textAnchor="middle"
-                  className="hover:fill-cyan-400"
                 >
                   <textPath href="#outerCirclePath" startOffset="10%">
                     Visit Qiita ...
@@ -77,10 +77,10 @@ export default function Index() {
                 target="_blank"
               >
                 <text
+                  className="hover:fill-cyan-400"
                   fill="white"
                   fontSize="18"
                   textAnchor="middle"
-                  className="hover:fill-cyan-400"
                 >
                   <textPath href="#outerCirclePath" startOffset="35%">
                     Career history resume ...
@@ -95,10 +95,10 @@ export default function Index() {
                 target="_blank"
               >
                 <text
+                  className="hover:fill-cyan-400"
                   fill="white"
                   fontSize="18"
                   textAnchor="middle"
-                  className="hover:fill-cyan-400"
                 >
                   <textPath href="#outerCirclePath" startOffset="60%">
                     Check GitHub ...
@@ -113,10 +113,10 @@ export default function Index() {
                 target="_blank"
               >
                 <text
+                  className="hover:fill-cyan-400"
                   fill="white"
                   fontSize="18"
                   textAnchor="middle"
-                  className="hover:fill-cyan-400"
                 >
                   <textPath href="#outerCirclePath" startOffset="85%">
                     Visit Wantedly ...
