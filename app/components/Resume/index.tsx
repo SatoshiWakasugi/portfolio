@@ -56,7 +56,7 @@ export const Resume: React.FC<Props> = ({ projects }) => {
               key={project.id}
               name={project.name}
               scale={project.scale}
-              start_date={dayjs(project.start_date).format("YYYY-MM-DD")}
+              start_date={project.start_date}
             />
           ))}
         </View>

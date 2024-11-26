@@ -15,7 +15,7 @@ export const meta: MetaFunction = () => {
 export const loader = async () => {
   const apiUrl = process.env.MICRO_CMS_URL;
   const apiKey = process.env.MICRO_CMS_API_KEY;
-  const response = await fetch(`${apiUrl}/career?orders=start_date`, {
+  const response = await fetch(`${apiUrl}/career?orders=-start_date`, {
     headers: {
       "X-API-KEY": apiKey || "",
     },
